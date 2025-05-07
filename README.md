@@ -1,2 +1,0 @@
-# AtekerVibes
-Entertainment Website
