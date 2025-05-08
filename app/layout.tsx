@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Alex_Brush, Montserrat } from 'next/font/google'
 import "./globals.css";
-
-const montserrat = Montserrat({
-  weight: ["400", "500", "600", "700", "800", "900"], 
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
-
-const alexBrush = Alex_Brush({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--font-alexBrush",
-});
+import { montserrat } from "./fonts";
 
 export const metadata: Metadata = {
   title: "AtekerVibes",
@@ -27,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${alexBrush.variable} antialiased`}
-      >
-        {children}
+        className={`${montserrat.className} antialiased`}
+      > 
+        {children} 
       </body>
     </html>
   );
